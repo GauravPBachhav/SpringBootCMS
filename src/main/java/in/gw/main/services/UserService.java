@@ -14,20 +14,28 @@ public class UserService {
 	private UserRepository userRepository;
 	
 	
-	public boolean registerUserService(User user)
+	public void registerUserService(User user)
 	{
-		try {
+		
 		userRepository.save(user);
-		return true;
-		}
 		
-		
-		
-		catch(Exception e)
+	}
+	
+	public boolean loginUserService(String email, String password)
+	{
+	
+		User user = userRepository.findByEmail(email);
+		if(user != null)
 		{
-			e.printStackTrace();
+			return password.equals(user.getPassword());  // if user is not null it means it contains some information and so if its passwords is equal to user.getpassword from database then it return true;
+			
+		}
+		else
+		{
 			return false;
 		}
+		
+
 	}
 	
 }
