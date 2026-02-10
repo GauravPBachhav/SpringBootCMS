@@ -193,5 +193,18 @@ public class UserController {
 	}
 	
 	
+	
+	@GetMapping("/mycources")
+	public String myCourcesPage()
+	
+	{
+		
+		
+	return "my-cources";	
+	}
+	
+	
+	
+	
 
 }
