@@ -1,0 +1,65 @@
+<header th:fragment="crm-header">
+		<nav
+		    class="navbar navbar-expand-lg navbar-dark"
+		    style="
+		      background-image:
+		        linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+		        url(&quot;images/navbarbackground.png&quot;);
+		      background-size: cover;
+		      background-position: center;
+		      background-repeat: no-repeat;
+		    "
+		  >
+        <div class="container">
+          <a class="navbar-brand" href="/index">
+            <img src="images/logo.png" alt="SmartProgramming" width="60" />
+            <span class="h3">Smart Programming</span>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/index"
+                  >Home</a
+                >
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  More
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#">Online Batch Details</a>
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li><a class="dropdown-item" href="#">Contact Us</a></li>
+                  <li><a class="dropdown-item" href="#">About US</a></li>
+                </ul>
+              </li>
+            </ul>
+
+            <a href="/login" class="btn btn-primary ms-4">Login</a>
+            <a href="/register" class="btn btn-light ms-4">Register</a>
+          </div>
+        </div>
+      </nav>
+    </header>

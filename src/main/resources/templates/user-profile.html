@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
 
 <head>
     <meta charset="utf-8">
@@ -14,17 +14,20 @@
 
 <body>
 
-    <!-- header starts -->
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark"
-        style="
-          background-image:
-            linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-            url(&quot;images/navbarbackground.png&quot;);
-          background-size: cover;
-          background-position: center;
-          background-repeat: no-repeat;
-        ">
+
+   <!-- <header>
+		<nav
+		    class="navbar navbar-expand-lg navbar-dark"
+		    style="
+		      background-image:
+		        linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+		        url(&quot;images/navbarbackground.png&quot;);
+		      background-size: cover;
+		      background-position: center;
+		      background-repeat: no-repeat;
+		    "
+		  >   
+		  
             <div class="container">
                 <a class="navbar-brand" href="index.html">
                     <img src="images/logo.png" alt="Smart Programming Logo" width="60" />
@@ -58,7 +61,12 @@
                 </div>
             </div>
         </nav>
-    </header>
+    </header>-->
+	
+	
+	<div th:replace="~{fragment/user-header :: u-header}"></div>
+
+	
     <!-- header ends -->
 
     <!-- main content starts -->
@@ -86,19 +94,19 @@
                                     <tbody>
                                         <tr>
                                             <td>Name</td>
-                                            <td>Deepak</td>
+                                             <td th:text="${sessionUser.name}"></td>
                                         </tr>
                                         <tr>
                                             <td>Email</td>
-                                            <td>deepak@gmail.com</td>
+											<td th:text="${sessionUser.email}"></td>
                                         </tr>
                                         <tr>
                                             <td>Phone No.</td>
-                                            <td>+91 62838-30308</td>
+											<td th:text="${sessionUser.phoneno}"></td>
                                         </tr>
                                         <tr>
                                             <td>City</td>
-                                            <td>Chandigarh</td>
+											<td th:text="${sessionUser.city}"></td>
                                         </tr>
                                     </tbody>
                                 </table>
