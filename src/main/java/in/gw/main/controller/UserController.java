@@ -205,6 +205,17 @@ public class UserController {
 	
 	
 	
+
+	@GetMapping("/userProfile")
+	public String openUserProfile()
+	
+	{
+		
+		
+	return "user-profile";	
+	}
+	
+	
 	
 
 }
