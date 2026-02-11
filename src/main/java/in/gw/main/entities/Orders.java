@@ -16,11 +16,30 @@ public class Orders {
 	private String courseName;
 
 	@Column
+	private String courseAmount;
+	
+	@Column
 	private String userEmail;
 
 	@Column
+	private String orderId;
+	
+	
+	public String getOrderId() {
+		return orderId;
+	}
+	public void setOrderId(String orderId) {
+		this.orderId = orderId;
+	}
+	@Column
 	private String dateOfPurchase;
 
+	public String getCourseAmount() {
+		return courseAmount;
+	}
+	public void setCourseAmount(String courseAmount) {
+		this.courseAmount = courseAmount;
+	}
 	@Column
 	private String rzpPaymentId;
 
